@@ -48,12 +48,12 @@
 
         layer_2 {
             // ------------------------------------ //
-            // | None   | PrintScreen | Chuyển Layer 3 | //
+            // | ESC    | PrintScreen | Chuyển Layer 3 | //
             // | Ctrl+C | HOME        | PAGE UP        | //
             // | Ctrl+V | END         | PAGE DOWN      | //
             display-name = "layer2";
             bindings = <
-                &none      &kp PRINTSCREEN  &to 3
+                &kp ESC    &kp PRINTSCREEN  &to 3
                 &kp LC(C)  &kp HOME         &kp PG_UP
                 &kp LC(V)  &kp END          &kp PG_DN
             >;
@@ -75,5 +75,3 @@
         };
     };
 };
-
-
