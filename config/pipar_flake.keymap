@@ -23,55 +23,56 @@
             // | TAB  | WINDOWS | Chuyển Layer 1 | //
             // | BSPC | UP      | ENTER          | //
             // | LEFT | DOWN    | RIGHT          | //
-            display-name = "default";
+            display-name = "Mui ten";
             bindings = <
                 &kp TAB        &kp LEFT_WIN   &to 1
                 &kp BACKSPACE  &kp UP_ARROW   &kp ENTER
                 &kp LEFT_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            // Đã đảo chiều: Xoay phải (Tăng âm lượng) - Xoay trái (Giảm âm lượng)
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         function_layer {
             // ------------------------------------ //
             // | BT_CLR | None       | Chuyển Layer 2 | //
             // | BT_1   | BT_2       | BT_3           | //
-            // | BT_4   | BOOTLOADER | RIGHT (xuyên)  | //
-            display-name = "function";
+            // | BT_4   | BOOTLOADER | None           | //
+            display-name = "Bluetooth Bootloader Function";
             bindings = <
                 &bt BT_CLR   &none        &to 2
                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2
-                &bt BT_SEL 3 &bootloader  &trans
+                &bt BT_SEL 3 &bootloader  &none
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        layer_2 {
+        luot_web_layer {
             // ------------------------------------ //
-            // | ESC    | PrintScreen | Chuyển Layer 3 | //
-            // | Ctrl+C | HOME        | PAGE UP        | //
-            // | Ctrl+V | END         | PAGE DOWN      | //
-            display-name = "layer2";
+            // | None   | None | Chuyển Layer 3 | //
+            // | ESC    | HOME | PAGE UP        | //
+            // | ENTER  | END  | PAGE DOWN      | //
+            display-name = "Luot web";
             bindings = <
-                &kp ESC    &kp PRINTSCREEN  &to 3
-                &kp LC(C)  &kp HOME         &kp PG_UP
-                &kp LC(V)  &kp END          &kp PG_DN
+                &none      &none     &to 3
+                &kp ESC    &kp HOME  &kp PG_UP
+                &kp ENTER  &kp END   &kp PG_DN
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        layer_3 {
+        copy_paste_layer {
             // ------------------------------------ //
-            // | None   | None | Về lại Layer 0 | //
-            // | Ctrl+C | None | None           | //
-            // | Ctrl+V | None | None           | //
-            display-name = "layer3";
+            // | None   | None        | Về lại Layer 0 | //
+            // | Ctrl+C | None        | ESC            | //
+            // | Ctrl+V | PrintScreen | ENTER          | //
+            display-name = "Copy Paste";
             bindings = <
-                &none      &none  &to 0
-                &kp LC(C)  &none  &none
-                &kp LC(V)  &none  &none
+                &none      &none            &to 0
+                &kp LC(C)  &none            &kp ESC
+                &kp LC(V)  &kp PRINTSCREEN  &kp ENTER
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
