@@ -55,8 +55,8 @@
             display-name = "Luot web";
             bindings = <
                 &none      &none     &to 3
-                &kp ESC    &kp HOME  &kp PG_UP
-                &kp ENTER  &kp END   &kp PG_DN
+                &kp HOME  &kp PG_UP  &kp ESC
+                &kp END   &kp PG_DN  &kp ENTER
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
