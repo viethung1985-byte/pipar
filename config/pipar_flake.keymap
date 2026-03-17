@@ -34,7 +34,7 @@
                 &kp LEFT_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
  layer_2 {
@@ -44,7 +44,7 @@ bindings = <
                 &kp HOME  &kp PG_UP  &kp ENTER
                 &kp END   &kp PG_DN  &kp ESC
             >;
-sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
+sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
 copy_layer {
@@ -54,7 +54,7 @@ copy_layer {
                 &kp LC(C)  &kp PRINTSCREEN  &kp ENTER
                 &kp LC(V)  &kp PRINTSCREEN  &kp ESC
             >;
-            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         function_layer {
@@ -70,7 +70,7 @@ copy_layer {
 &bt BT_SEL 3  &bt BT_SEL 4  &bootloader  
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
        
